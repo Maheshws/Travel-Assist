@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ws.mahesh.travelassist.beta.bus.finder.BusRouteFinderActivity">
+
+    <include layout="@layout/default_toolbar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewSRC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:gravity="center"
+                android:hint="Source Address"
+                android:padding="8dp" />
+            <ImageButton
+                android:id="@+id/imageButtonSrc"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_my_location_white_48dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewDEST"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:gravity="center"
+                android:hint="Destination Address"
+                android:padding="8dp" />
+            <ImageButton
+                android:id="@+id/imageButtonDest"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_my_location_white_48dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonFindBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Bus" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/route_finder_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ws.mahesh.travelassist.beta.trains.finder.TrainsFinderActivity">
+    <item android:id="@+id/action_feedback" android:title="Feedback"
+        android:orderInCategory="1000" app:showAsAction="never" />
+    <item android:id="@+id/action_screenshot" android:icon="@mipmap/ic_fullscreen_white_48dp" android:title="Screenshot"
+        android:orderInCategory="10" app:showAsAction="always" />
+</menu>

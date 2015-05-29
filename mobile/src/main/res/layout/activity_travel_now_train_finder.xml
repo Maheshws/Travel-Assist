@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ws.mahesh.travelassist.beta.trains.finder.TrainsFinderActivity">
+
+    <include layout="@layout/default_toolbar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewSRC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:gravity="center"
+                android:hint="Source Station" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSrc"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_my_location_white_48dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewDEST"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:gravity="center"
+                android:hint="Destination Station" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDest"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_my_location_white_48dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroupTime"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leave by"
+                    android:checked="true"
+                    android:id="@+id/radioButtonNow" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reach by :"
+                    android:id="@+id/radioButtonLater" />
+
+            </RadioGroup>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:ems="2"
+                    android:hint="HH"
+                    android:id="@+id/editTextTimeHR"
+                    android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:id="@+id/textView9" />
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:ems="2"
+                    android:hint="MM"
+                    android:id="@+id/editTextTimeMIN"
+                    android:gravity="center" />
+                </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonFindTrains"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Travel Now" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/route_finder_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>
